@@ -8,7 +8,7 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  { path: '/history/:upc', component: HistoryPage },
+  { path: '/history/:upc', name: 'history',  component: HistoryPage },
   {
     path: '/products',
     component: ProductView

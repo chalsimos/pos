@@ -133,10 +133,15 @@
       </v-icon>
       <v-icon
         size="small"
-        @click="deleteItem(item)"
+        @click="openQuantityModal(item)"
       >
-        mdi-delete
+        mdi-plus
       </v-icon>
+      
+      <router-link :to="{ name: 'history', params: { upc: item.upc } }">
+      <v-icon size="small">mdi-history</v-icon>
+    </router-link>
+      
     </template>
     <template v-slot:no-data>
       <v-btn
@@ -153,6 +158,10 @@ import axios from 'axios'
   export default {
     data: () => ({
       dialog: false,
+      quantityModal: false,
+      selectedProduct: null,
+      quantityToAdd: 0,
+      search: '',
       dialogDelete: false,
     headers: [
             {
@@ -171,18 +180,20 @@ import axios from 'axios'
       desserts: [],
       editedIndex: -1,
       editedItem: {
+        upc: '',
         name: '',
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0,
+        description: '',
+        quantity: 0,
+        price: 0,
+        cateogry:''
       },
       defaultItem: {
+        upc: '',
         name: '',
-        calories: 0,
-        fat: 0,
-        carbs: 0,
-        protein: 0,
+        description: '',
+        quantity: 0,
+        price: 0,
+        cateogry:''
       },
     }),
 
@@ -206,10 +217,27 @@ import axios from 'axios'
     },
 
     methods: {
-      // async getProducts(){
-      //     const data = await axios.get('api/getProducts');
-      //     this.desserts = data.data;
-      //   },
+      openQuantityModal(item) {
+      this.selectedProduct = item;
+      this.quantityToAdd = 0;
+      this.quantityModal = true;
+    },
+    closeQuantityModal() {
+      this.selectedProduct = null;
+      this.quantityToAdd = 0;
+      this.quantityModal = false;
+    },
+    async addQuantity() {
+      const updatedProduct = { ...this.selectedProduct };
+      updatedProduct.quantity += parseInt(this.quantityToAdd);
+      await axios.post('api/updateQuantity', {
+        upc: updatedProduct.upc,
+        quantity: this.quantityToAdd,
+      });
+      const index = this.desserts.findIndex((product) => product.upc === updatedProduct.upc);
+      this.initialize();
+      this.closeQuantityModal();
+    },
         async  initialize () {
         const data = await axios.get('api/getProducts');
           this.desserts = data.data;
@@ -248,10 +276,16 @@ import axios from 'axios'
         })
       },
 
-      save () {
+      async save () {
         if (this.editedIndex > -1) {
+          // edit
+          const response = await axios.put(`api/updateproduct/${this.editedItem.id}`, this.editedItem);
+          console.log(response.data);
           Object.assign(this.desserts[this.editedIndex], this.editedItem)
         } else {
+          
+          const response = await axios.post('api/newproduct', this.editedItem);
+          console.log(response.data);
           this.desserts.push(this.editedItem)
         }
         this.close()

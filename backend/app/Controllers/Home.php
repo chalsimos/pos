@@ -5,11 +5,29 @@ use CodeIgniter\RESTful\ResourceController;
 use App\Models\SalesModel;
 use App\Models\ProductModel;
 use App\Models\AuditModel;
+use CodeIgniter\API\ResponseTrait;
+
 class Home extends ResourceController
 {
+  use ResponseTrait;
+
     public function index()
     {
         return view('welcome_message');
+    }
+    public function updateProduct($id)
+    {
+      $data = $this->request->getJSON(); 
+       $model = new ProductModel();
+       $model->update($id, $data);
+
+       return $this->respond(['status' => 'success', 'message' => 'Product updated successfully']);
+    }
+    public function newproduct()
+    {
+      $data = $this->request->getJSON();
+        $model = new ProductModel();
+        $model->insert($data);
     }
     public function getSales($id)
     {

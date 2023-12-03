@@ -81,27 +81,14 @@
       this.quantityModal = false;
     },
     async addQuantity() {
-      // Perform the logic to add quantity using axios or your preferred method
-      // Update the selected product's quantity in the desserts array
-      // Close the modal
       const updatedProduct = { ...this.selectedProduct };
       updatedProduct.quantity += parseInt(this.quantityToAdd);
-      // Perform the logic to update the quantity on the server using axios or your preferred method
-      // For example, you might need to make a POST request to update the quantity
       await axios.post('api/updateQuantity', {
         upc: updatedProduct.upc,
         quantity: this.quantityToAdd,
       });
-      
-      // Find the index of the updated product in the desserts array
       const index = this.desserts.findIndex((product) => product.upc === updatedProduct.upc);
       this.getProducts();
-      // Update the product in the desserts array
-      // if (index !== -1) {
-      //   this.$set(this.desserts, index, updatedProduct);
-      // }
-
-      // Close the modal
       this.closeQuantityModal();
     },
         async getProducts(){
