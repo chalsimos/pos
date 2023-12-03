@@ -152,6 +152,19 @@
       </v-btn>
     </template>
   </v-data-table>
+  <v-dialog v-model="quantityModal" max-width="400">
+    <v-card>
+      <v-card-title>Add Quantity</v-card-title>
+      <v-card-text>
+        <!-- Your quantity input field and other necessary fields go here -->
+        <v-text-field v-model="quantityToAdd" label="Quantity"></v-text-field>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn @click="addQuantity">Add</v-btn>
+        <v-btn @click="closeQuantityModal">Close</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </template>
 <script>
 import axios from 'axios'
