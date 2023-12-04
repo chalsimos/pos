@@ -14,3 +14,4 @@ $routes->match(['get', 'post'], '/api/updateQuantity', 'Home::updateQuantity');
 $routes->match(['get', 'post'], '/api/audit/(:any)', 'Home::audit/$1');
 $routes->match(['get', 'post'], '/api/newproduct', 'Home::newproduct');
 $routes->put('api/updateproduct/(:num)', 'Home::updateProduct/$1');
+$routes->match(['get', 'post'], '/api/products', 'Home::getProducts');

@@ -17,7 +17,7 @@ class Home extends ResourceController
     }
     public function updateProduct($id)
     {
-      $data = $this->request->getJSON(); 
+      $data = $this->request->getJSON();
        $model = new ProductModel();
        $model->update($id, $data);
 
@@ -111,7 +111,7 @@ class Home extends ResourceController
         $d = $sales->save($data);
         $message = "added";
       }else{
-        $message = "No product found";
+        $message = "no_result";
       }
       //
       return $this->respond($message, 200);
