@@ -190,6 +190,7 @@ export default {
       
     },
     async handleSales() {
+      // SET MODAL HERE TO ASK FOR PAYMENT MODE AND AMOUNT PAID
       const sales = await axios.get(`api/setsales/${this.salesTransactionNumber}`);
       this.salesTransactionNumber = this.generateRandomKey();
       this.getSales();
