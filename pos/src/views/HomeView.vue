@@ -131,7 +131,7 @@ export default {
       showPaymentModal: false,
       paymentMode: null,
       amountPaid: null,
-      paymentModes: ['Cash', 'Credit Card', 'Debit Card', 'Other'], // Add your payment modes
+      paymentModes: ['Cash', 'Credit Card', 'Debit Card', 'Gcash', 'Maya'], 
     };
   },
   computed:{
