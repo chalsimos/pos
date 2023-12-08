@@ -101,6 +101,7 @@
       <v-card-text>
         <!-- Add input fields for payment mode and amount paid -->
         <v-select v-model="paymentMode" :items="paymentModes" label="Payment Mode"></v-select>
+        <v-text-field v-if="paymentMode !== 'Cash'" v-model="cardboxInput" label="Cardbox Input"></v-text-field>
         <v-text-field v-model="amountPaid" label="Amount Paid"></v-text-field>
       </v-card-text>
       <v-card-actions>
@@ -132,6 +133,7 @@ export default {
       paymentMode: null,
       amountPaid: null,
       paymentModes: ['Cash', 'Credit Card', 'Debit Card', 'Gcash', 'Maya'], 
+      cardboxInput:''
     };
   },
   computed:{
@@ -210,6 +212,10 @@ export default {
     handleSales() {
       // SET MODAL HERE TO ASK FOR PAYMENT MODE AND AMOUNT PAID
       this.showPaymentModal = true;
+      if (this.paymentMode !== 'Cash') {
+        console.log('Cardbox Input:', this.cardboxInput);
+      }
+      
     },
     async processPayment() {
       console.log('Processing payment...');
