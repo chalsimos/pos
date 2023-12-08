@@ -46,7 +46,7 @@
               label="Fixed Input Text"
               outlined
               @keydown.enter="handleEnterKey"
-              @keydown.ctrl.enter.prevent="handleSales"
+              @keydown.ctrl.f1.prevent="handleSales"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -95,6 +95,20 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+    <v-dialog v-model="showPaymentModal" max-width="400">
+    <v-card>
+      <v-card-title>Payment Information</v-card-title>
+      <v-card-text>
+        <!-- Add input fields for payment mode and amount paid -->
+        <v-select v-model="paymentMode" :items="paymentModes" label="Payment Mode"></v-select>
+        <v-text-field v-model="amountPaid" label="Amount Paid"></v-text-field>
+      </v-card-text>
+      <v-card-actions>
+        <v-btn @click="processPayment" color="primary">Process Payment</v-btn>
+        <v-btn @click="cancelPayment" color="error">Cancel</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
   </v-app>
 </template>
 
@@ -113,7 +127,11 @@ export default {
       showProductModal: false,
       productList: [],
       prod:[],
-      showQuantityModal:false
+      showQuantityModal:false,
+      showPaymentModal: false,
+      paymentMode: null,
+      amountPaid: null,
+      paymentModes: ['Cash', 'Credit Card', 'Debit Card', 'Other'], // Add your payment modes
     };
   },
   computed:{
@@ -189,11 +207,31 @@ export default {
 
       
     },
-    async handleSales() {
+    handleSales() {
       // SET MODAL HERE TO ASK FOR PAYMENT MODE AND AMOUNT PAID
+      this.showPaymentModal = true;
+    },
+    async processPayment() {
+      console.log('Processing payment...');
       const sales = await axios.get(`api/setsales/${this.salesTransactionNumber}`);
       this.salesTransactionNumber = this.generateRandomKey();
       this.getSales();
+      this.showPaymentModal = false;
+      this.paymentMode = null;
+      this.amountPaid = null;
+
+    },
+
+    cancelPayment() {
+      // Close the payment modal without processing the payment
+      this.showPaymentModal = false;
+
+      // Reset payment-related data
+      this.paymentMode = null;
+      this.amountPaid = null;
+
+      // Additional actions if needed
+      // ...
     },
     showQuantity(){
       this.showQuantityModal= true;
