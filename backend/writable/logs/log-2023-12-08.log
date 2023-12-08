@@ -1,0 +1,1282 @@
+ERROR - 2023-12-08 12:13:19 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('UST71KOP')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('UST71KOP')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:13:19 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('UST71KOP')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:13:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('1RU3W9YD')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('1RU3W9YD')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:13:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('1RU3W9YD')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:13:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('OG5P4H2B')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('OG5P4H2B')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:13:30 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('OG5P4H2B')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:13:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('J6YK36ZD')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('J6YK36ZD')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:13:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('J6YK36ZD')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:15:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('AQOSRHOX')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('AQOSRHOX')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:15:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('AQOSRHOX')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:15:45 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('V1CL1V71')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('V1CL1V71')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:15:45 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('V1CL1V71')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:17:57 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('GOV46SE3')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('GOV46SE3')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:17:57 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('GOV46SE3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:18:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('JEK3HG7R')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('JEK3HG7R')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:18:30 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('JEK3HG7R')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:18:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('Q0RE66C8')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('Q0RE66C8')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:18:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('Q0RE66C8')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:18:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('9CENPL8Q')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('9CENPL8Q')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:18:52 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('9CENPL8Q')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:19:06 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('6C46SJ4F')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('6C46SJ4F')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:19:06 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('6C46SJ4F')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:19:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('IE1O7332')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('IE1O7332')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:19:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('IE1O7332')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:19:54 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('PLMQS1BH')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('PLMQS1BH')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:19:54 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('PLMQS1BH')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:05 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('HITE50B1')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('HITE50B1')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:05 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('HITE50B1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:24 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('X4OIJ1NF')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('X4OIJ1NF')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:24 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('X4OIJ1NF')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:34 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('CHCS1CRG')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('CHCS1CRG')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:34 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('CHCS1CRG')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:38 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(76): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->setsales('CHCS1CRG')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(76): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->setsales('CHCS1CRG')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:38 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `sales`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(76): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->setsales('CHCS1CRG')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:42 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `upc` = :upc:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->isales()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('3U1XKR65')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('3U1XKR65')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:46 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('3U1XKR65')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `upc` = :upc:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->isales()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:55 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(76): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->setsales('3U1XKR65')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(76): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->setsales('3U1XKR65')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `sales`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(76): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->setsales('3U1XKR65')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:20:59 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:20:59 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `upc` = :upc:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->isales()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:21:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:21:03 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `upc` = :upc:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->isales()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:21:07 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:21:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `upc` = :upc:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->isales()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:21:11 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->isales()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:21:11 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`
+WHERE `upc` = :upc:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Home.php(101): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->isales()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:21:18 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('ZYFPBYZX')
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` a...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getSales('ZYFPBYZX')
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:21:18 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `name` as `name`, `sales`.`price` as `price`, `sales`.`quantity` as `quantity`
+FROM `sales`
+JOIN `products` ON `sales`.`productID`=`products`.`id`
+WHERE `orderID` = :orderID:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(35): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getSales('ZYFPBYZX')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:21:22 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getProducts()
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(67): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getProducts()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:21:22 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(67): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getProducts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')
+ERROR - 2023-12-08 12:21:27 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'med', 3306, '', 0)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(67): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getProducts()
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\pc\Desktop\project\git\pos\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pc\Desktop\project\git\pos\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\pc\Desktop\project\git\pos\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pc\Desktop\project\git\pos\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\pc\Desktop\project\git\pos\backend\app\Controllers\Home.php(67): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(942): App\Controllers\Home->getProducts()
+#7 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Users\pc\Desktop\project\git\pos\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\pc\Desktop\project\git\pos\backend\public\index.php(87): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pc\Desktop\project\git\pos\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Des...')
+#11 {main}
+CRITICAL - 2023-12-08 12:21:27 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(67): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->getProducts()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(87): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pc\\Desktop\\project\\git\\pos\\backend\\public\\index.php')

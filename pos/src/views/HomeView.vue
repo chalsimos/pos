@@ -1,6 +1,26 @@
 <template>
   <v-app>
     <v-row>
+     <v-col cols="12" sm="6">
+        <v-card>
+          <v-card-title>Products</v-card-title>
+          <v-row>
+            <v-col v-for="(product, index) in prod" :key="index" cols="12" sm="4">
+              <v-card @click="showQuantity">
+                <v-card-title>{{ product.name }}</v-card-title>
+                <v-card-subtitle>{{ product.price }}</v-card-subtitle>
+              </v-card>
+            </v-col>
+          </v-row>
+          <v-row v-if="prod.length === 0">
+            <v-col cols="12">
+              <v-card>
+                <v-card-text>No products available</v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
       <v-col>
         <div v-if="salesTransactionNumber">
               Sales Transaction Number: <b>{{ salesTransactionNumber }}</b>
@@ -32,7 +52,18 @@
         </v-row>
       </v-container>
     </v-footer>
-
+    <v-dialog v-model="showQuantityModal" max-width="400">
+      <v-card>
+        <v-card-title>Enter Quantity</v-card-title>
+        <v-card-text>
+          <v-text-field v-model="quantity" label="Quantity" type="number"></v-text-field>
+        </v-card-text>
+        <v-card-actions>
+          <v-btn @click="addToCart">Add to Cart</v-btn>
+          <v-btn @click="closeQuantityModal">Cancel</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     <v-dialog v-model="showProductModal" max-width="600" @click:outside="showProductModal = false">
       <v-card>
         <v-card-title class="headline">
@@ -81,6 +112,8 @@ export default {
       upc:'',
       showProductModal: false,
       productList: [],
+      prod:[],
+      showQuantityModal:false
     };
   },
   computed:{
@@ -105,9 +138,19 @@ export default {
   created(){
     this.salesTransactionNumber = this.generateRandomKey();
     this.getSales();
+    this.getProducts();
   },
   watch: {
     showProductModal: 'showProductModalChanged',
+    
+    $data: {
+      handler() {
+        this.$nextTick(() => {
+          this.$refs.productFilterInput && this.$refs.productFilterInput.focus();
+        });
+      },
+      deep: true,
+    },
   },
   methods: {
     async showProductModalChanged() {
@@ -116,11 +159,15 @@ export default {
         this.$refs.productFilterInput.focus();
       }
     },
-
+    async getProducts(){
+      const data = await axios.get('api/getProducts');
+      this.prod = data.data;
+    },
 
     selectProduct(upc) {
       this.inputText = upc;
       this.showProductModal = false;
+      
     },
     generateRandomKey() {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -146,6 +193,9 @@ export default {
       const sales = await axios.get(`api/setsales/${this.salesTransactionNumber}`);
       this.salesTransactionNumber = this.generateRandomKey();
       this.getSales();
+    },
+    showQuantity(){
+      this.showQuantityModal= true;
     },
     async handleEnterKey() {
       if (this.inputText.includes('@')) {
